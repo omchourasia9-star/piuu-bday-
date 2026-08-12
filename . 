@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Piuu ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    color:white;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+
+    background:
+    radial-gradient(circle at 15% 15%,#ffd6e7 0,transparent 28%),
+    radial-gradient(circle at 85% 85%,#cdb8ff 0,transparent 30%),
+    linear-gradient(135deg,#160d20,#32152f,#120b1a);
+}
+
+/* Background glow */
+
+body::before,
+body::after{
+    content:"";
+    position:fixed;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.2;
+    z-index:0;
+    pointer-events:none;
+}
+
+body::before{
+    width:350px;
+    height:350px;
+    background:#ff70ad;
+    top:-100px;
+    left:-100px;
+}
+
+body::after{
+    width:350px;
+    height:350px;
+    background:#8e6cff;
+    right:-100px;
+    bottom:-100px;
+}
+
+/* Main container */
+
+.container{
+    width:92%;
+    max-width:720px;
+    margin:30px auto;
+    position:relative;
+    z-index:2;
+}
+
+/* Glass cards */
+
+.card{
+    background:rgba(255,255,255,.075);
+
+    border:1px solid rgba(255,255,255,.16);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-radius:30px;
+
+    padding:38px 24px;
+
+    margin-bottom:22px;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.35),
+    inset 0 1px rgba(255,255,255,.12);
+
+    animation:fadeUp 1s ease both;
+}
+
+/* Hero */
+
+.hero{
+    text-align:center;
+    padding:55px 20px;
+}
+
+.small{
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:11px;
+    opacity:.7;
+}
+
+h1{
+    font:600 58px 'Cormorant Garamond',serif;
+
+    margin:10px 0;
+
+    background:
+    linear-gradient(90deg,#fff,#ffc4dc,#fff);
+
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.piuu{
+    font:700 78px 'Cormorant Garamond',serif;
+
+    color:#ffd0e3;
+
+    text-shadow:
+    0 0 30px rgba(255,120,180,.5);
+}
+
+.subtitle{
+    font-size:13px;
+    opacity:.72;
+    margin-top:10px;
+}
+
+/* Titles */
+
+.title{
+    text-align:center;
+
+    font:
+    600 32px 'Cormorant Garamond',serif;
+
+    color:#ffd1e3;
+
+    margin-bottom:20px;
+}
+
+/* Poems */
+
+.poem{
+    font:
+    400 21px/1.7
+    'Cormorant Garamond',serif;
+
+    text-align:center;
+
+    color:#fff4f8;
+}
+
+.funny{
+    text-align:center;
+
+    font:
+    400 27px/1.5
+    'Cormorant Garamond',serif;
+
+    color:#ffe2ee;
+}
+
+/* Divider */
+
+.divider{
+    text-align:center;
+
+    margin:10px 0 20px;
+
+    color:#ff9fc5;
+
+    letter-spacing:10px;
+}
+
+/* Quote */
+
+.quote{
+    text-align:center;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    font-style:italic;
+
+    padding:12px;
+}
+
+.quote span{
+    display:block;
+
+    margin-top:12px;
+
+    font-size:11px;
+
+    opacity:.55;
+
+    font-style:normal;
+}
+
+/* =========================
+   PHOTO GALLERY
+========================= */
+
+.gallery{
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:14px;
+
+    margin-top:20px;
+}
+
+.photo{
+    position:relative;
+
+    height:250px;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    border:
+    1px solid
+    rgba(255,255,255,.18);
+
+    box-shadow:
+    0 12px 35px
+    rgba(0,0,0,.3);
+
+    background:#111;
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.6s;
+}
+
+.photo:hover img{
+    transform:scale(1.06);
+}
+
+/* First photo bigger */
+
+.photo:first-child{
+    grid-column:span 2;
+
+    height:360px;
+}
+
+/* Photo captions */
+
+.caption{
+    position:absolute;
+
+    left:12px;
+    bottom:12px;
+
+    padding:7px 12px;
+
+    border-radius:20px;
+
+    background:
+    rgba(0,0,0,.38);
+
+    backdrop-filter:blur(8px);
+
+    font-size:11px;
+}
+
+/* Button */
+
+button{
+    display:block;
+
+    margin:22px auto 0;
+
+    border:0;
+
+    padding:15px 28px;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #ff7eb3,
+    #d78cff
+    );
+
+    color:white;
+
+    font:
+    600 14px
+    Poppins,sans-serif;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 8px 30px
+    rgba(255,100,170,.35);
+
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.06);
+}
+
+/* Surprise */
+
+#surprise{
+    display:none;
+
+    text-align:center;
+
+    margin-top:22px;
+
+    padding:24px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.07);
+
+    border:
+    1px solid
+    rgba(255,255,255,.1);
+
+    animation:
+    fadeUp .8s ease;
+}
+
+#surprise h2{
+    font:
+    600 35px
+    'Cormorant Garamond',serif;
+
+    color:#ffd0e4;
+
+    margin-bottom:10px;
+}
+
+#surprise p{
+    line-height:1.7;
+
+    opacity:.9;
+}
+
+/* Footer */
+
+.footer{
+    text-align:center;
+
+    opacity:.5;
+
+    font-size:11px;
+
+    padding:
+    15px 0 30px;
+}
+
+/* Floating hearts */
+
+.heart{
+    position:fixed;
+
+    bottom:-30px;
+
+    z-index:1;
+
+    animation:
+    floatHeart
+    linear
+    forwards;
+
+    pointer-events:none;
+}
+
+/* Confetti */
+
+.confetti{
+    position:fixed;
+
+    width:8px;
+    height:8px;
+
+    z-index:10;
+
+    border-radius:2px;
+
+    animation:
+    fall
+    linear
+    forwards;
+}
+
+/* Animations */
+
+@keyframes floatHeart{
+
+    0%{
+        transform:
+        translateY(0)
+        scale(.7)
+        rotate(0);
+
+        opacity:0;
+    }
+
+    15%{
+        opacity:.8;
+    }
+
+    100%{
+        transform:
+        translateY(-110vh)
+        scale(1.3)
+        rotate(30deg);
+
+        opacity:0;
+    }
+}
+
+@keyframes fall{
+
+    0%{
+        transform:
+        translateY(-20px)
+        rotate(0);
+
+        opacity:1;
+    }
+
+    100%{
+        transform:
+        translateY(110vh)
+        rotate(720deg);
+
+        opacity:0;
+    }
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:
+        translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:
+        translateY(0);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:500px){
+
+    .container{
+        width:94%;
+        margin:20px auto;
+    }
+
+    .card{
+        padding:30px 17px;
+        border-radius:25px;
+    }
+
+    h1{
+        font-size:45px;
+    }
+
+    .piuu{
+        font-size:62px;
+    }
+
+    .poem{
+        font-size:19px;
+    }
+
+    .funny{
+        font-size:23px;
+    }
+
+    .photo{
+        height:210px;
+    }
+
+    .photo:first-child{
+        height:300px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="card hero">
+
+    <div class="small">
+        A little birthday page made specially for
+    </div>
+
+    <h1>
+        Happy Birthday
+    </h1>
+
+    <div class="piuu">
+        Piuu ❤️
+    </div>
+
+    <div class="subtitle">
+        ✨ One special day. One very special person. ✨
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FUNNY LINE
+========================= -->
+
+<section class="card">
+
+    <div class="divider">
+        ♡ ♡ ♡
+    </div>
+
+    <div class="funny">
+
+        में सीधा-साधा पवित्र पीपल सा,<br>
+
+        तुम उस पर लटकी चुड़ैल प्रिय। 😂❤️
+
+    </div>
+
+    <div class="divider">
+        ♡ ♡ ♡
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PHOTO GALLERY
+========================= -->
+
+<section class="card">
+
+    <div class="title">
+        📸 Little Memories
+    </div>
+
+    <div class="gallery">
+
+
+        <div class="photo">
+
+            <img
+            src="photo1.jpg"
+            alt="Piuu Memory 1">
+
+            <div class="caption">
+                That smile ✨
+            </div>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photo2.jpg"
+            alt="Piuu Memory 2">
+
+            <div class="caption">
+                Pretty Piuu 🌸
+            </div>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photo3.jpg"
+            alt="Piuu Memory 3">
+
+            <div class="caption">
+                Little Piuu 🧸
+            </div>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photo4.jpg"
+            alt="Memory 4">
+
+            <div class="caption">
+                A tiny masterpiece 🌹
+            </div>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photo5.jpg"
+            alt="Memory 5">
+
+            <div class="caption">
+                Doraemon-approved 😂
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     POEM 1
+========================= -->
+
+<section class="card">
+
+    <div class="title">
+        🌸 एक खूबसूरत याद
+    </div>
+
+    <div class="poem">
+
+        Woh phool,
+        jo har baagh ko khushboo se bhar deta hai,
+
+        <br>
+
+        Tumhare haathon ki woh mehak,
+        aaj bhi dil mein thehar jaati hai. 🌸
+
+        <br><br>
+
+        Woh pal jab tumhe pehli dafa dekha tha,
+
+        <br>
+
+        Jaise kisi film ka haseen manzar
+        saamne aa gaya tha. ✨
+
+        <br><br>
+
+        Waqt tham sa gaya,
+        mausam badal sa gaya,
+
+        <br>
+
+        Aur pata hi nahi chala…
+
+        <br>
+
+        <b>
+            kab dil tumhara ho gaya. ❤️
+        </b>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     QUOTE
+========================= -->
+
+<section class="card">
+
+    <div class="title">
+        🌙 Sometimes...
+    </div>
+
+    <div class="quote">
+
+        "God gives you the people you need,<br>
+
+        God never gives you the people you want."
+
+        <span>
+            — Sometimes unexpected people become
+            beautiful memories.
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     POEM 2
+========================= -->
+
+<section class="card">
+
+    <div class="title">
+        🌌 एक छोटी सी दुनिया
+    </div>
+
+    <div class="poem">
+
+        Kahin door in palkon mein
+        tumhe sambhaal loon,
+
+        <br>
+
+        Phir kabhi tumhe jaane na doon.
+
+        <br><br>
+
+        Jahaan na nazrein pahunch paayein,
+
+        <br>
+
+        Tumhe us jahaan le jaaun.
+
+        <br><br>
+
+        Apni in naino mein tumhe
+        yun basa loon,
+
+        <br>
+
+        Ki har khwaab sirf tumhara ho.
+
+        <br><br>
+
+        Aur ek aisi duniya bana doon,
+
+        <br>
+
+        Jahaan tak kisi aur ka
+        raasta hi na ho. ✨
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MEMORIES
+========================= -->
+
+<section class="card">
+
+    <div class="title">
+        🫶 Memories
+    </div>
+
+    <div class="poem">
+
+        Wohi achhi baatein
+        yaad karte hain hum. ❤️
+
+        <br><br>
+
+        Kuch pal chhote hote hain,
+
+        <br>
+
+        lekin unki yaadein
+        bahut badi hoti hain.
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     STARS
+========================= -->
+
+<section class="card">
+
+    <div class="title">
+        🌙 सितारे और चाँद
+    </div>
+
+    <div class="poem">
+
+        Ki mil jaaye saare
+        sitare aasman ke,
+
+        <br>
+
+        par kya karun un sitaron ka...
+
+        <br><br>
+
+        Jab mera chaand hi na ho
+
+        <br>
+
+        un sitaron mein. 🌙✨
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SURPRISE
+========================= -->
+
+<section class="card">
+
+    <div class="title">
+        🎁 One Last Surprise
+    </div>
+
+    <button onclick="showSurprise()">
+
+        ✨ Open Your Surprise ✨
+
+    </button>
+
+
+    <div id="surprise">
+
+        <h2>
+            Happy Birthday, Piuu! 🎂❤️
+        </h2>
+
+        <p>
+
+            Today is your day. 🌸
+
+            <br><br>
+
+            Keep smiling, keep being
+            your crazy self,
+
+            <br>
+
+            and keep making ordinary
+            moments memorable. ✨
+
+            <br><br>
+
+            And yes...
+
+            <br><br>
+
+            <b>
+                You're officially allowed
+                to eat extra cake today. 😂🎂
+            </b>
+
+            <br><br>
+
+            Have the happiest birthday! 💗
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<div class="footer">
+
+    Made with ❤️ & a little bit of madness 😂
+
+    <br>
+
+    For Piuu ✨
+
+</div>
+
+
+</div>
+
+
+<script>
+
+/* =========================
+   SURPRISE BUTTON
+========================= */
+
+function showSurprise(){
+
+    document.getElementById(
+        "surprise"
+    ).style.display = "block";
+
+
+    createConfetti();
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createHeart(){
+
+    const heart =
+        document.createElement("div");
+
+
+    heart.className = "heart";
+
+
+    const hearts = [
+
+        "❤️",
+        "💗",
+        "💖",
+        "💕",
+        "🌸",
+        "✨"
+
+    ];
+
+
+    heart.innerHTML =
+        hearts[
+            Math.floor(
+                Math.random() *
+                hearts.length
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random()*100 + "vw";
+
+
+    heart.style.fontSize =
+        (12 + Math.random()*22)
+        + "px";
+
+
+    heart.style.animationDuration =
+        (5 + Math.random()*5)
+        + "s";
+
+
+    document.body.appendChild(
+        heart
+    );
+
+
+    setTimeout(
+        () => heart.remove(),
+        10000
+    );
+
+}
+
+
+setInterval(
+    createHeart,
+    600
+);
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+function createConfetti(){
+
+    for(
+        let i=0;
+        i<120;
+        i++
+    ){
+
+        const piece =
+            document.createElement(
+                "div"
+            );
+
+
+        piece.className =
+            "confetti";
+
+
+        piece.style.left =
+            Math.random()*100
+            + "vw";
+
+
+        piece.style.top =
+            "-10px";
+
+
+        piece.style.background =
+            `hsl(
+                ${Math.random()*360},
+                80%,
+                70%
+            )`;
+
+
+        piece.style.animationDuration =
+            (2 + Math.random()*3)
+            + "s";
+
+
+        document.body.appendChild(
+            piece
+        );
+
+
+        setTimeout(
+            () => piece.remove(),
+            5000
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
